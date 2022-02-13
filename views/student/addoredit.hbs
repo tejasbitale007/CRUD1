@@ -1,0 +1,30 @@
+<h3>{{'viewTitle'}}</h3> 
+<form action="/student" method="post" autocomplete="off">
+    <div class="form-group">
+        <label for="fullname">Full name</label>
+        <input type="text" name="fullname" class="form-control" value="{{student.fullname}}">
+        <div class="text-danger">
+            {{student.fullnameError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" class="form-control" placeholder="E-mail" value="{{student.email}}">
+        <div class="text-danger">
+            {{student.emailError}}
+        </div>
+    </div>
+    <div class="form-row">
+       <div class="form-group col-md-6">
+           <label for="class">class</label>
+           <input type="text" name="class" class="form-control" placeholder="class" value="{{student.class}}">
+       </div>
+        <div class="form-group col-md-6">
+           <label for="sub">Sub</label>
+           <input type="text" name="sub" class="form-control" placeholder="sub" value="{{student.sub}}">
+       </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn-btn-info"><i class="fa fa-database"></i>Submit</button>
+    </div>
+</form>
